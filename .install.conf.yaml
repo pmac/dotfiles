@@ -12,6 +12,8 @@
     ~/.zprofile: prezto/runcoms/zprofile
     ~/.zshenv: prezto/runcoms/zshenv
     ~/.zshrc: prezto/runcoms/zshrc
+    ~/.gitconfig: gitconfig
+    ~/.gitignore: gitignore
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

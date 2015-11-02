@@ -1,0 +1,39 @@
+[user]
+    name = Paul McLanahan
+    email = pmac@mozilla.com
+    signingkey = E25F97CC
+[alias]
+    co = checkout
+    ci = commit
+    st = status -sb
+    su = submodule update --init --recursive
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    pr = pull-request
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    pullify = config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+    fpr = "!f() { git fetch -fu origin refs/pull/$1/head:pr/$1; } ; f"
+    fprr = "!f() { git fetch -fu $1 refs/pull/$2/head:pr/$2; } ; f"
+    pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
+    here = rev-parse --abbrev-ref HEAD
+    hash = rev-parse --short HEAD
+    longhash = rev-parse HEAD
+    bloglog = log --no-merges --since=2.weeks --pretty=format:'%h - %ad - %an - %s' --date=short
+[core]
+    excludesfile = ~/.gitignore
+    editor = vim
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[push]
+    default = current
+[branch]
+    autosetuprebase = always
+[rebase]
+    autosquash = true
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true

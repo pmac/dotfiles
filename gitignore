@@ -1,0 +1,11 @@
+.idea/
+.DS_Store
+.svn
+Thumbs.db
+*~
+*.tmproj
+*.pyc
+working/
+*.log
+local_settings.py
+test_:memory:
