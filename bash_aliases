@@ -63,3 +63,16 @@ alias dokku='$HOME/src/dokku/contrib/dokku_client.sh'
 whothefuckisusingport() {
   lsof -i tcp:$*
 }
+
+git-date-tag() {
+  date_tag=$(date --rfc-3339=date)
+  tag_suffix=0
+  tag_value=$date_tag
+  git tag $date_tag 2> /dev/null
+  while [[ $? != 0 ]]; do
+    tag_suffix=$(( $tag_suffix + 1 ))
+    tag_value="${date_tag}.${tag_suffix}"
+    git tag $tag_value 2> /dev/null
+  done
+  echo "tagged $tag_value"
+}
