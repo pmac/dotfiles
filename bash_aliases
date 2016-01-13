@@ -34,6 +34,7 @@ cl(){
     cd $1 && ll
 }
 
+alias gtd='git-date-tag'
 alias gcom='gco master'
 alias gcb='gco -b'
 alias gsu='git su'
@@ -76,3 +77,5 @@ git-date-tag() {
   done
   echo "tagged $tag_value"
 }
+
+nse() { docker exec -it $1 bash; }
