@@ -15,6 +15,7 @@
     ~/.zshrc: prezto/runcoms/zshrc
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.dir_colors: dir_colors
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
