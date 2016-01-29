@@ -28,6 +28,7 @@ alias startredis='redis-server /usr/local/etc/redis.conf'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias deis-euw='DEIS_PROFILE=euw deis'
+alias aws-euw='aws --profile euw'
 alias tagdate='date --rfc-3339=date'
 
 cl(){
