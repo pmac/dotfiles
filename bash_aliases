@@ -80,5 +80,7 @@ git-date-tag() {
 }
 
 nse() { docker exec -it $1 bash; }
+drun() { docker run -it $1 bash; }
 
 fixssh() { eval $(tmux show-env -s |grep '^SSH_') }
+fixdocker-xhyve() { eval $(docker-machine env xhyve) }
