@@ -42,6 +42,7 @@ alias gsu='git su'
 alias gci='git ci'
 alias gst='git st'
 alias gbg='git branch | grep -i'
+alias gbld="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"
 alias grbm='git rebase master'
 alias grbim='git rebase -i master'
 alias git-delete-merged='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
