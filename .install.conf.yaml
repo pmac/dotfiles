@@ -16,6 +16,8 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.dir_colors: dir_colors
+    ~/.virtualenvs/postactivate: venv.postactivate
+    ~/.virtualenvs/postdeactivate: venv.postdeactivate
 
 - shell:
   - [touch ~/.vimrc.bundles.local]

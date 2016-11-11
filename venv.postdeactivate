@@ -1,0 +1,6 @@
+#!/bin/bash
+# This hook is run after every virtualenv is deactivated.
+
+unset PYTHONDONTWRITEBYTECODE
+unset PYTHONUNBUFFERED
+tmux set-window-option automatic-rename "on" 1>/dev/null
