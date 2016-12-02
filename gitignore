@@ -8,3 +8,4 @@ Thumbs.db
 working/
 local_settings.py
 test_:memory:
+.stfolder

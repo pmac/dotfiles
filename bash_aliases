@@ -98,3 +98,8 @@ deis-both() {
 }
 
 fixssh() { eval $(tmux show-env -s | grep '^SSH_'); }
+
+switchify() {
+  fixedname=$(echo "$1" | tr '[:lower:]-' '[:upper:]_')
+  echo "SWITCH_$fixedname"
+}
