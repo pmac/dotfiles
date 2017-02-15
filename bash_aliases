@@ -9,6 +9,7 @@ alias lstl='twidge lsarchive'
 alias psg='ps aux | grep -i'
 alias pp='pbpaste | curl -s -F "sprunge=<-" sprunge.us | pbcopy'
 alias ppo='pp && pbpaste | xargs open'
+alias pe='pipenv'
 
 if [ -x /usr/bin/htop ]; then
     alias top='htop'
@@ -92,9 +93,14 @@ deis-usw() { DEIS_PROFILE=usw deis "$@"; }
 deis-euw() { DEIS_PROFILE=euw deis "$@"; }
 deis-both() {
     for profile in usw euw; do
-        echo $profile
+        echo '#################'
+        echo "## $profile"
+        echo '#################'
+        echo
         DEIS_PROFILE=$profile deis "$@"
+        echo
     done
+    echo "## DONE ##"
 }
 
 fixssh() { eval $(tmux show-env -s | grep '^SSH_'); }
