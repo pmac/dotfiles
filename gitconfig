@@ -19,6 +19,7 @@
     hash = rev-parse --short HEAD
     longhash = rev-parse HEAD
     bloglog = log --no-merges --since=2.weeks --pretty=format:'%h - %ad - %an - %s' --date=short
+    dad = !curl https://icanhazdadjoke.com/ && git add
 [core]
     excludesfile = ~/.gitignore
     editor = vim
