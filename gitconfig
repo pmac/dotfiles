@@ -1,7 +1,7 @@
 [user]
-    name = Paul McLanahan
-    email = pmac@mozilla.com
-    signingkey = E25F97CC
+	name = Paul McLanahan
+	email = pmac@mozilla.com
+	signingkey = 210CEF9FE25F97CC
 [alias]
     co = checkout
     ci = commit
@@ -35,6 +35,7 @@
 [rebase]
     autosquash = true
 [filter "lfs"]
-    clean = git-lfs clean %f
-    smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
     required = true
+	process = git-lfs filter-process

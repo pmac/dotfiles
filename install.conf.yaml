@@ -4,6 +4,7 @@
     ~/.tmux.conf: tmux.conf
     ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.ideavimrc: ideavimrc
     ~/.vimrc.bundles: vimrc.bundles
     ~/.bash_aliases: bash_aliases
     ~/.zprezto: prezto

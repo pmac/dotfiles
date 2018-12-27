@@ -1,4 +1,5 @@
 .idea/
+.ipython
 .vscode/
 .DS_Store
 .svn
